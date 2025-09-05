@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <!-- optional -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>Sameer Patil</h1>
+      <nav>
+        <ul>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#projects" class="nav-item">Projects</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p class="intro">
+          I am a Computer Engineering fresher passionate about web development
+          and programming.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <article>
+          <h3>Air Quality Prediction</h3>
+          <p>
+            Predicted air quality using data analysis and visualization
+            techniques.
+          </p>
+        </article>
+        <article>
+          <h3>Portfolio Website</h3>
+          <p>
+            Created a personal portfolio with HTML, CSS, and responsive design.
+          </p>
+        </article>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: sameer@example.com</p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/sameerpatil</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Sameer Patil. All rights reserved.</p>
+    </footer>
+
+    <!-- Smooth Scroll -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
