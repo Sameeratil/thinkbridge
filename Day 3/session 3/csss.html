@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity, Inheritance & Box Model</title>
+   <link rel="stylesheet" href="check.css" /> 
+  </head>
+  <body>
+    <h1>Specificity & Inheritance Experiments</h1>
+
+    <!-- Specificity -->
+    <h2>Specificity</h2>
+    <p>This is a normal paragraph (element selector).</p>
+    <p class="text">This paragraph has a class.</p>
+    <p id="para" class="text">This paragraph has ID and class.</p>
+    <p id="inline" class="text" style="color: orange">
+      This paragraph has inline style.
+    </p>
+
+    <!-- Inheritance -->
+    <h2>Inheritance</h2>
+    <div class="parent">
+      Parent text should be purple.
+      <span class="child">Child span overrides with black.</span>
+   <!-- Box Model -->
+<h2>Box Model</h2>
+<div class="box">
+  This is a box. Inspect me in DevTools to see margin, padding, border, and content.
+</div> 
+  </body>
+</html>

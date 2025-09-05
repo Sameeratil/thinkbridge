@@ -1,0 +1,38 @@
+/* -------- Specificity -------- */
+p {
+  color: blue; /* element selector */
+}
+.text {
+  color: green; /* class selector */
+}
+#para {
+  color: red; /* ID selector */
+}
+/* Inline style in HTML overrides these rules */
+#inline {
+  color: pink; /* overridden by inline style */
+}
+#para.text {
+  color: darkred;
+  font-weight: bold;
+}
+
+/* -------- Inheritance -------- */
+.parent {
+  color: purple; /* parent text becomes purple */
+}
+.child {
+  color: black; /* child overrides inheritance */
+}
+/* -------- Box Model -------- */
+.box {
+  width: 300px; /* content width */
+  height: 150px; /* content height */
+  padding: 20px; /* inside spacing */
+  margin: 30px; /* outside spacing */
+  border: 5px solid black; /* border thickness */
+  background-color: lightblue;
+
+  /* Play with this: content-box vs border-box */
+  box-sizing: border-box;
+}

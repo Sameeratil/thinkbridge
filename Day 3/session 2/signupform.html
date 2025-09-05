@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedIn Signup Form - Restructured</title>
+  </head>
+  <body>
+    <h1>Join LinkedIn</h1>
+
+    <form action="#" method="post" aria-label="LinkedIn Signup Form" novalidate>
+      <!-- Section 1: Name -->
+      <section>
+        <h2>1. Your Name</h2>
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fname"
+            >First Name <span aria-hidden="true">*</span></label
+          >
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            required
+            aria-required="true"
+            minlength="2"
+            maxlength="30"
+            pattern="[A-Za-z\s]+"
+            title="First name should only contain letters and spaces."
+          />
+
+          <label for="lname">Last Name <span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            required
+            aria-required="true"
+            minlength="2"
+            maxlength="30"
+            pattern="[A-Za-z\s]+"
+            title="Last name should only contain letters and spaces."
+          />
+        </fieldset>
+      </section>
+
+      <!-- Section 2: Account -->
+      <section>
+        <h2>2. Account Information</h2>
+        <fieldset>
+          <legend>Contact Info</legend>
+
+          <label for="email"
+            >Email or Phone <span aria-hidden="true">*</span></label
+          >
+          <input
+            type="text"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+            placeholder="Email or Phone"
+            title="Enter a valid email or phone number."
+          />
+
+          <label for="password"
+            >Password <span aria-hidden="true">*</span></label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            aria-required="true"
+            minlength="6"
+            maxlength="20"
+            title="Password must be 6–20 characters long."
+          />
+        </fieldset>
+      </section>
+
+      <!-- Section 3: Location -->
+      <section>
+        <h2>3. Location</h2>
+        <fieldset>
+          <legend>Country / Region</legend>
+          <label for="country">Select your country</label>
+          <select id="country" name="country">
+            <option value="">--Select--</option>
+            <option value="in">India</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+          </select>
+        </fieldset>
+      </section>
+
+      <!-- Section 4: Optional Professional Info -->
+      <section>
+        <h2>4. Professional Info (Optional)</h2>
+        <fieldset>
+          <legend>Job Details</legend>
+
+          <label for="jobtitle">Job Title</label>
+          <input type="text" id="jobtitle" name="jobtitle" />
+
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" />
+        </fieldset>
+      </section>
+
+      <!-- Section 5: Preferences & Terms -->
+      <section>
+        <h2>5. Preferences & Terms</h2>
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <div>
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            <label for="newsletter"
+              >Receive updates and offers from LinkedIn</label
+            >
+          </div>
+
+          <div>
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+              I agree to the <a href="#">User Agreement</a>,
+              <a href="#">Privacy Policy</a>, and <a href="#">Cookie Policy</a>.
+            </label>
+          </div>
+        </fieldset>
+      </section>
+
+      <!-- Submit -->
+      <section>
+        <button type="submit">Agree & Join</button>
+      </section>
+    </form>
+  </body>
+</html>

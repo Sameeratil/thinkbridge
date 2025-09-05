@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sameer Patil — Portfolio</title>
+    <meta
+      name="description"
+      content="A simple semantic HTML5 portfolio template using header, nav, main, article, section, and footer."
+    />
+    <!--<style>
+    /* Basic, clean styling for the demo */
+    :root{--accent:#2563eb;--muted:#6b7280;--max:1000px}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;margin:0;color:#111}
+    .container{max-width:var(--max);margin:24px auto;padding:0 16px}
+    header{padding:20px 0;border-bottom:1px solid #e6e6e6}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:8px 0}
+    nav a{text-decoration:none;color:var(--muted)}
+    nav a:focus, nav a:hover{color:var(--accent)}
+    .hero{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+    .hero h2{margin:0 0 8px}
+    .grid{display:grid;grid-template-columns:1fr;gap:20px}
+    @media(min-width:760px){.grid{grid-template-columns:2fr 1fr}}
+    .card{border:1px solid #eee;padding:16px;border-radius:10px;background:#fff}
+    footer{padding:18px 0;border-top:1px solid #eee;color:var(--muted);text-align:center;margin-top:24px}
+    .projects li{margin-bottom:12px}
+    .contact a{color:var(--accent);text-decoration:none}
+  </style> -->
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="brand">
+          <span class="logo">SP</span>
+          <div>
+            <div style="font-weight: 700">Sameer Patil</div>
+            <div style="font-size: 0.9rem; color: var(--muted)">
+              Web Developer · Machine learning · Data science
+            </div>
+          </div>
+        </div>
+        <nav aria-label="Main navigation">
+          <!-- Hidden checkbox to toggle menu -->
+          <input type="checkbox" id="menu-toggle" />
+          <label class="hamburger" for="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Articles</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- A top article that introduces you -->
+      <article class="hero card">
+        <div>
+          <h2>Hello — I'm Sameer</h2>
+          <p>
+            I build small web projects and explore data-driven applications.
+            This is a minimal semantic HTML5 template to get my portfolio
+            started.
+          </p>
+          <p style="margin: 12px 0"><a href="#projects">View projects →</a></p>
+        </div>
+        <div style="min-width: 160px; text-align: right; color: var(--muted)">
+          <div style="font-size: 0.85rem">Location</div>
+          <div>India</div>
+        </div>
+      </article>
+
+      <div class="grid" style="margin-top: 18px">
+        <!-- Main column: sections for about, projects, blog -->
+        <section>
+          <section id="about" class="card" aria-labelledby="about-heading">
+            <h3 id="about-heading">About me</h3>
+            <p>
+              I'm a fresher with a BE in Computer Engineering. I like making gym
+              videos, working with pets, and learning web technologies. I'm a
+              passionate learner and like to meet new people and learn from them
+            </p>
+          </section>
+
+          <section
+            id="projects"
+            class="card"
+            aria-labelledby="projects-heading"
+            style="margin-top: 16px"
+          >
+            <h3 id="projects-heading">Projects</h3>
+            <ul class="projects">
+              <li>
+                <strong>Air Quality Prediction</strong> — A machine learning
+                project to predict AQI (dataset + model).
+              </li>
+              <li>
+                <strong>Portfolio Site</strong> — This static site built with
+                semantic HTML and simple CSS.
+              </li>
+              <li>
+                <strong>SQL Dashboard</strong> — Sample queries and
+                visualisations using SQL and charting libs.
+              </li>
+            </ul>
+            <p><a href="#contact">Want to collaborate?</a></p>
+          </section>
+
+          <section
+            id="blog"
+            class="card"
+            aria-labelledby="blog-heading"
+            style="margin-top: 16px"
+          >
+            <h3 id="blog-heading">Latest article</h3>
+            <article>
+              <h4>Getting started with semantic HTML</h4>
+              <p class="muted">
+                A short guide on using header, nav, main, article, section, and
+                footer to structure your pages for accessibility and SEO.
+              </p>
+            </article>
+          </section>
+        </section>
+
+        <!-- Side column: contact or quick links -->
+        <aside class="card contact" aria-labelledby="contact-heading">
+          <h3 id="contact-heading">Contact</h3>
+          <p>
+            Email:
+            <a href="mailto:sameerpatil048@gmail.com"
+              >sameerpatil048@gmail.com</a
+            >
+          </p>
+          <p>
+            GitHub:
+            <a href="https://github.com/Sameeratil">github.com/sameer</a>
+          </p>
+          <p style="font-size: 0.9rem; color: var(--muted)">
+            Download resume, view projects, or say hi.
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="year"></span> Sameer Patil — Built with semantic HTML.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // small script to set the current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
