@@ -1,0 +1,166 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  background-color: #add8e6; /* light blue */
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Search bar */
+#search {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Night Mode button */
+#toggle-night {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff176;
+  color: #333;
+  transition: all 0.3s;
+}
+
+/* Hover effects */
+#toggle-night:hover {
+  background-color: #fdd835;
+  color: #000;
+}
+
+/* Night mode button styles */
+body.night #toggle-night {
+  background-color: #616161;
+  color: #e0e0e0;
+}
+body.night #toggle-night:hover {
+  background-color: #757575;
+  color: #ffffff;
+}
+
+/* Intro text */
+#intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Section titles */
+section h2 {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+}
+
+/* Different colors for each type */
+.html-title {
+  color: #42a5f5;
+}
+.css-title {
+  color: #ffb74d;
+}
+.js-title {
+  color: #4db6ac;
+}
+
+/* Hover effect on section titles */
+section h2:hover {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+/* Collapsible keyword list (card layout) */
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0.5rem 0;
+}
+
+/* Individual keyword cards */
+.keyword-card {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.8rem;
+  width: calc(33.33% - 1rem);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Hover effect for cards */
+.keyword-card:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-5px);
+}
+
+/* Keyword text inside card */
+.keyword-card strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+/* Description text */
+.keyword-card span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Night mode styles */
+body.night {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.night header {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+body.night .html-title {
+  color: #90caf9;
+}
+body.night .css-title {
+  color: #ffcc80;
+}
+body.night .js-title {
+  color: #80cbc4;
+}
+
+body.night .keyword-card {
+  background: #1e1e1e;
+  border: 1px solid #444;
+  color: #e0e0e0;
+}
+body.night .keyword-card:hover {
+  background-color: #333;
+}
