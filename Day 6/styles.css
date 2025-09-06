@@ -1,0 +1,176 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  background-color: #add8e6; /* light blue */
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  position: relative; /* needed for absolute positioning of button */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Night Mode button default */
+#toggle-night {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff176; /* yellow for day mode */
+  color: #333;
+  transition: all 0.3s;
+}
+
+/* Hover for day mode */
+#toggle-night:hover {
+  background-color: #fdd835;
+  color: #000;
+}
+
+/* Night mode button styles */
+body.night #toggle-night {
+  background-color: #616161; /* dark gray */
+  color: #e0e0e0;
+}
+
+/* Hover for night mode */
+body.night #toggle-night:hover {
+  background-color: #757575; /* lighter gray */
+  color: #ffffff;
+}
+
+/* Intro text */
+#intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Section titles */
+section h2 {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+}
+
+/* Different colors for each type */
+.html-title {
+  color: #42a5f5;
+}
+.css-title {
+  color: #ffb74d;
+}
+.js-title {
+  color: #4db6ac;
+}
+
+/* Hover effect on section titles */
+section h2:hover {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+/* HTML hover */
+.html-title:hover {
+  background-color: #bbdefb;
+  color: #0d47a1;
+}
+/* CSS hover */
+.css-title:hover {
+  background-color: #ffe0b2;
+  color: #e65100;
+}
+/* JS hover */
+.js-title:hover {
+  background-color: #b2dfdb;
+  color: #00695c;
+}
+
+/* Collapsible keyword list */
+.keyword-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+/* Individual keywords */
+.keyword-list div {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.keyword-list div:hover {
+  background-color: #e0f7fa;
+}
+
+/* Syntax style for CSS keywords */
+.keyword-list div div {
+  font-family: monospace;
+  margin-left: 1rem;
+  color: #555;
+}
+
+/* Night mode styles */
+body.night {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.night header {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+/* Night mode section titles */
+body.night .html-title {
+  color: #90caf9;
+}
+body.night .html-title:hover {
+  background-color: #0d47a1;
+  color: #ffffff;
+}
+
+body.night .css-title {
+  color: #ffcc80;
+}
+body.night .css-title:hover {
+  background-color: #e65100;
+  color: #ffffff;
+}
+
+body.night .js-title {
+  color: #80cbc4;
+}
+body.night .js-title:hover {
+  background-color: #00695c;
+  color: #ffffff;
+}
+
+body.night .keyword-list div {
+  border-bottom: 1px solid #444;
+}
+
+body.night .keyword-list div:hover {
+  background-color: #333;
+}
+
+body.night .keyword-list div div {
+  color: #bbb; /* syntax color in night mode */
+}
