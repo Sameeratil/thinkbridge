@@ -34,15 +34,7 @@ const cssKeywords = [
   },
   { keyword: "transform", description: "Applies 2D/3D transformations" },
   { keyword: "box-sizing", description: "Controls box model calculation" },
-  {
-    keyword: "position",
-    description:
-      "Specifies positioning method (static, relative, absolute, fixed, sticky)",
-  },
-  {
-    keyword: "top / right / bottom / left",
-    description: "Offsets for positioned elements",
-  },
+  { keyword: "position", description: "Specifies positioning method" },
   { keyword: "z-index", description: "Specifies stack order of elements" },
   { keyword: "overflow", description: "Controls content overflow" },
   { keyword: "opacity", description: "Sets element transparency" },
@@ -75,11 +67,11 @@ const jsKeywords = [
   { keyword: "object", description: "Collection of key-value pairs" },
   { keyword: "array", description: "Ordered collection of values" },
   {
-    keyword: "array methods (push, pop, shift, unshift, map, filter, forEach)",
-    description: "Common array operations",
+    keyword: "array methods",
+    description: "Common array operations like push, pop, map",
   },
   {
-    keyword: "document.querySelector / querySelectorAll",
+    keyword: "document.querySelector",
     description: "Select elements from the DOM",
   },
   { keyword: "addEventListener", description: "Attach event listeners" },
@@ -115,7 +107,7 @@ function renderKeywords(array, container, title, className) {
 
   const arrow = document.createElement("span");
   arrow.classList.add("arrow");
-  arrow.textContent = "▶";
+  arrow.textContent = "▶ ";
 
   heading.appendChild(arrow);
   heading.appendChild(document.createTextNode(title));
@@ -125,22 +117,28 @@ function renderKeywords(array, container, title, className) {
   listDiv.style.maxHeight = "0px";
 
   array.forEach((item) => {
-    const div = document.createElement("div");
+    const card = document.createElement("div");
+    card.classList.add("keyword-card");
+
     const safeKeyword = item.keyword
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
-    div.innerHTML = `<strong>${safeKeyword}</strong>: ${item.description}`;
-    listDiv.appendChild(div);
+
+    card.innerHTML = `
+      <strong>${safeKeyword}</strong>
+      <span>${item.description}</span>
+    `;
+    listDiv.appendChild(card);
   });
 
   heading.addEventListener("click", () => {
     const isOpen = listDiv.style.maxHeight !== "0px";
     if (isOpen) {
       listDiv.style.maxHeight = "0px";
-      arrow.textContent = "▶";
+      arrow.textContent = "▶ ";
     } else {
       listDiv.style.maxHeight = listDiv.scrollHeight + "px";
-      arrow.textContent = "▼";
+      arrow.textContent = "▼ ";
     }
   });
 
@@ -161,4 +159,13 @@ nightBtn.addEventListener("click", () => {
   nightBtn.textContent = document.body.classList.contains("night")
     ? "☀️ Day Mode"
     : "🌙 Night Mode";
+});
+
+// Search functionality
+document.getElementById("search").addEventListener("input", function () {
+  const query = this.value.toLowerCase();
+  document.querySelectorAll(".keyword-card").forEach((card) => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(query) ? "block" : "none";
+  });
 });

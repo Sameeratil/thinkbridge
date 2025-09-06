@@ -4,7 +4,7 @@ body {
   padding: 1rem;
   background-color: #f9f9f9;
   color: #333;
-  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
 }
 
 /* Header styles */
@@ -15,11 +15,20 @@ header {
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 1rem;
-  position: relative; /* needed for absolute positioning of button */
-  transition: background-color 0.3s, color 0.3s;
+  position: relative;
 }
 
-/* Night Mode button default */
+/* Search bar */
+#search {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Night Mode button */
 #toggle-night {
   position: absolute;
   top: 10px;
@@ -29,12 +38,12 @@ header {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  background-color: #fff176; /* yellow for day mode */
+  background-color: #fff176;
   color: #333;
   transition: all 0.3s;
 }
 
-/* Hover for day mode */
+/* Hover effects */
 #toggle-night:hover {
   background-color: #fdd835;
   color: #000;
@@ -42,13 +51,11 @@ header {
 
 /* Night mode button styles */
 body.night #toggle-night {
-  background-color: #616161; /* dark gray */
+  background-color: #616161;
   color: #e0e0e0;
 }
-
-/* Hover for night mode */
 body.night #toggle-night:hover {
-  background-color: #757575; /* lighter gray */
+  background-color: #757575;
   color: #ffffff;
 }
 
@@ -86,44 +93,45 @@ section h2:hover {
   border-radius: 5px;
 }
 
-/* HTML hover */
-.html-title:hover {
-  background-color: #bbdefb;
-  color: #0d47a1;
-}
-/* CSS hover */
-.css-title:hover {
-  background-color: #ffe0b2;
-  color: #e65100;
-}
-/* JS hover */
-.js-title:hover {
-  background-color: #b2dfdb;
-  color: #00695c;
-}
-
-/* Collapsible keyword list */
+/* Collapsible keyword list (card layout) */
 .keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
+  padding: 0.5rem 0;
 }
 
-/* Individual keywords */
-.keyword-list div {
-  padding: 0.5rem;
-  border-bottom: 1px solid #ccc;
-  transition: background-color 0.3s;
+/* Individual keyword cards */
+.keyword-card {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.8rem;
+  width: calc(33.33% - 1rem);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.3s;
 }
 
-.keyword-list div:hover {
-  background-color: #e0f7fa;
+/* Hover effect for cards */
+.keyword-card:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-5px);
 }
 
-/* Syntax style for CSS keywords */
-.keyword-list div div {
-  font-family: monospace;
-  margin-left: 1rem;
+/* Keyword text inside card */
+.keyword-card strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+/* Description text */
+.keyword-card span {
+  font-size: 0.9rem;
   color: #555;
 }
 
@@ -138,39 +146,21 @@ body.night header {
   color: #e0e0e0;
 }
 
-/* Night mode section titles */
 body.night .html-title {
   color: #90caf9;
 }
-body.night .html-title:hover {
-  background-color: #0d47a1;
-  color: #ffffff;
-}
-
 body.night .css-title {
   color: #ffcc80;
 }
-body.night .css-title:hover {
-  background-color: #e65100;
-  color: #ffffff;
-}
-
 body.night .js-title {
   color: #80cbc4;
 }
-body.night .js-title:hover {
-  background-color: #00695c;
-  color: #ffffff;
-}
 
-body.night .keyword-list div {
-  border-bottom: 1px solid #444;
+body.night .keyword-card {
+  background: #1e1e1e;
+  border: 1px solid #444;
+  color: #e0e0e0;
 }
-
-body.night .keyword-list div:hover {
+body.night .keyword-card:hover {
   background-color: #333;
-}
-
-body.night .keyword-list div div {
-  color: #bbb; /* syntax color in night mode */
 }
