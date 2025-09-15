@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+header {
+  text-align: center;
+  background-color: yellow;
+  color: whibte;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Section titles */
+section h2 {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #4caf50;
+  cursor: pointer; /* pointer on hover */
+  user-select: none; /* prevent text selection */
+  transition: all 0.3s; /* smooth transitions for hover */
+}
+
+/* Hover effect on section titles */
+section h2:hover {
+  color: #2e7d32; /* Darker green */
+  background-color: #c8e6c9; /* Light green background */
+  padding: 0.3rem 0.5rem; /* small padding */
+  border-radius: 5px; /* rounded corners */
+}
+
+/* Collapsible keyword list */
+.keyword-list {
+  max-height: 0; /* collapsed by default */
+  overflow: hidden; /* hide content */
+  transition: max-height 0.5s ease;
+}
+
+/* Individual keywords */
+.keyword-list div {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.keyword-list div:hover {
+  background-color: #e0f7fa;
+}
